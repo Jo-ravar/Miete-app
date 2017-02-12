@@ -208,9 +208,11 @@
                     android:layout_gravity="left"
                     android:text="Contact No.* : "/>
                 <TextView
+                    android:onClick="onContactTextClick"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textSize="20dp"
+                    android:textColor="#4682B4"
                     android:id="@+id/seller_contactno"/>
             </LinearLayout>
 

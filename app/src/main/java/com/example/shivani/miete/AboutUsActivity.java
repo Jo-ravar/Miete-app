@@ -6,13 +6,15 @@ import android.os.Bundle;
 import android.widget.TextView;
 
 public class AboutUsActivity extends AppCompatActivity {
-    TextView textView2, shivaniText, sakshiText, raviText, textView3, aboutUsHead;
+    TextView textView2, shivaniText, sakshiText, raviText, textView3, aboutUsHead, disText, devText;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_about_us);
         aboutUsHead = (TextView) findViewById(R.id.aboutUsHead);
+        disText = (TextView) findViewById(R.id.disclaimer_id);
+        devText = (TextView) findViewById(R.id.developers_id);
         textView2 = (TextView) findViewById(R.id.textView2);
         shivaniText = (TextView) findViewById(R.id.shivani);
         sakshiText = (TextView) findViewById(R.id.sakshi);
@@ -25,5 +27,7 @@ public class AboutUsActivity extends AppCompatActivity {
         sakshiText.setTypeface(custom_font);
         raviText.setTypeface(custom_font);
         textView3.setTypeface(custom_font);
+        disText.setTypeface(custom_font);
+        devText.setTypeface(custom_font);
     }
 }

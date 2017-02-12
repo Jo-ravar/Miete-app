@@ -35,7 +35,7 @@ public class FeedbackFragment extends Fragment implements View.OnClickListener {
         textTo = (EditText)  view.findViewById(R.id.editTextTo);
         textSubject = (EditText)  view.findViewById(R.id.editTextSubject);
         textMessage = (EditText) view.findViewById(R.id.editTextMessage);
-
+        textTo.setText("rent_miete@gmail.com");
         buttonSend.setOnClickListener(this);
 
         return view;
