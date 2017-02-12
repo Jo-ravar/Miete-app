@@ -10,7 +10,7 @@ To run this application on your local system you must have
 Android studio or ecllipse installed in your device.
 
 #Development Setup
-For running the app you can you android emulator or can debug using your smart phone.
+For running the app you can use android emulator or can debug using your smart phone.
 
 #usage
 You can use this app for easy renting and to get a idea about the working of any rental application. 
