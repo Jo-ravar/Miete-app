@@ -186,6 +186,14 @@ public class Upload extends AppCompatActivity {
         });
 
     }
+
+    @Override
+    public void onBackPressed() {
+        finish();
+        Intent intent = new Intent(Upload.this, NavigationActivity.class);
+        startActivity(intent);
+    }
+
     public   boolean isonline(){
         Log.e("coool start is online", " ");
         ConnectivityManager cm = (ConnectivityManager)getSystemService(Context.CONNECTIVITY_SERVICE);

@@ -1,12 +1,8 @@
 package com.example.shivani.miete;
 
 import android.content.Intent;
-import android.graphics.Typeface;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
-import android.support.v4.app.Fragment;
-import android.support.v7.widget.SearchView;
 import android.util.Log;
 import android.view.View;
 import android.support.design.widget.NavigationView;
@@ -67,8 +63,8 @@ public class NavigationActivity extends AppCompatActivity
         else
         {
 
-          showItem(R.id.logout);
-          hideItem(R.id.login);
+            showItem(R.id.logout);
+            hideItem(R.id.login);
         }
 
         getSupportFragmentManager()
@@ -89,7 +85,7 @@ public class NavigationActivity extends AppCompatActivity
                     startActivity(intent);
                     finish();
                 }
-               else{
+                else{
                     Intent intent= new Intent(NavigationActivity.this,Upload.class);
                     startActivity(intent);
                     finish();
@@ -163,31 +159,31 @@ public class NavigationActivity extends AppCompatActivity
         if (id == R.id.western) {
             getSupportFragmentManager()
                     .beginTransaction()
-                    .replace(R.id.frag_container, westernFragment)
+                    .replace(R.id.frag_container, westernFragment).addToBackStack("categoryFragment")
                     .commit();
 
         } else if (id == R.id.ethnic) {
             getSupportFragmentManager()
                     .beginTransaction()
-                    .replace(R.id.frag_container, ethnicFragment)
+                    .replace(R.id.frag_container, ethnicFragment).addToBackStack("categoryFragment")
                     .commit();
 
         } else if (id == R.id.foot) {
             getSupportFragmentManager()
                     .beginTransaction()
-                    .replace(R.id.frag_container, footFragment)
+                    .replace(R.id.frag_container, footFragment).addToBackStack("categoryFragment")
                     .commit();
 
         } else if (id == R.id.sports) {
             getSupportFragmentManager()
                     .beginTransaction()
-                    .replace(R.id.frag_container, sportsFragment)
+                    .replace(R.id.frag_container, sportsFragment).addToBackStack("categoryFragment")
                     .commit();
 
         } else if (id == R.id.feedback) {
             getSupportFragmentManager()
                     .beginTransaction()
-                    .replace(R.id.frag_container,feedbackFragment )
+                    .replace(R.id.frag_container,feedbackFragment ).addToBackStack("categoryFragment")
                     .commit();
         }else if (id == R.id.login) {
             Intent intent = new Intent(NavigationActivity.this, LoginActivity.class);
@@ -201,7 +197,7 @@ public class NavigationActivity extends AppCompatActivity
         else if (id == R.id.home) {
             getSupportFragmentManager()
                     .beginTransaction()
-                    .replace(R.id.frag_container,categoryFragment )
+                    .replace(R.id.frag_container,categoryFragment ).addToBackStack("categoryFragment")
                     .commit();
         }else if (id == R.id.yourorders) {
             String token =(String) PrefsHelper.getPrefsHelper(NavigationActivity.this).getPref(PrefsHelper.PREF_TOKEN,"Cool");
@@ -213,7 +209,7 @@ public class NavigationActivity extends AppCompatActivity
             }
             else{getSupportFragmentManager()
                     .beginTransaction()
-                    .replace(R.id.frag_container,yourOrdersFragment )
+                    .replace(R.id.frag_container,yourOrdersFragment ).addToBackStack("categoryFragment")
                     .commit();}
         }else if (id == R.id.yourprofile) {
             String token =(String) PrefsHelper.getPrefsHelper(NavigationActivity.this).getPref(PrefsHelper.PREF_TOKEN,"Cool");
@@ -226,7 +222,7 @@ public class NavigationActivity extends AppCompatActivity
             else {
                 getSupportFragmentManager()
                         .beginTransaction()
-                        .replace(R.id.frag_container, yourProfileFragment)
+                        .replace(R.id.frag_container, yourProfileFragment).addToBackStack("categoryFragment")
                         .commit();
             }
         }
